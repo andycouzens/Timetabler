@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Timetabler.WCF.EventsService" CodeBehind="EventsService.svc.cs" %>

@@ -1,7 +1,11 @@
-﻿using Microsoft.Owin;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(Timetabler.Web.Startup))]
+[assembly: OwinStartup(typeof(Timetabler.Web.Startup))]
+
 namespace Timetabler.Web
 {
     public partial class Startup
