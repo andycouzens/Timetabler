@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Timetabler.Entitities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Timetabler.Entitities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvent" nillable="true" type="tns:ArrayOfEvent" />
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:EventType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Event" nillable="true" type="tns:Event" />
+  <xs:simpleType name="EventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Lesson" />
+      <xs:enumeration value="Exam" />
+      <xs:enumeration value="Tutorial" />
+      <xs:enumeration value="PracticalLession" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventType" nillable="true" type="tns:EventType" />
+</xs:schema>

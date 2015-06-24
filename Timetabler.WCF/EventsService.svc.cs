@@ -9,15 +9,20 @@ using System.Threading.Tasks;
 using Timetabler.Data;
 using Timetabler.Entitities;
 
+using System.Data.Entity;
+
 namespace Timetabler.WCF
 {
     public class EventsService : IEventsService
     {
-        public List<Event> GetEvents()
+        public async Task<List<Event>> GetEvents()
         {
             TimetablerDb db = new TimetablerDb();
 
-            return db.Events.ToList();
+
+
+
+            return await db.Events.ToListAsync();
         }
     }
 }

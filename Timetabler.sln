@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timetabler.Data", "Timetabler.Data\Timetabler.Data.csproj", "{780D278C-2A29-46F9-82DE-2F62C403C44C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timetabler.Web", "Timetabler.Web\Timetabler.Web.csproj", "{0CC85682-BA06-4160-8FB2-BD0F9A06F5E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B03C11A6-873A-4132-984C-62C8F7C89C38} = {B03C11A6-873A-4132-984C-62C8F7C89C38}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timetabler.Web.Tests", "Timetabler.Web.Tests\Timetabler.Web.Tests.csproj", "{810C684C-A7CA-48A3-9126-D2B694B06CA5}"
 EndProject

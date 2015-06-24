@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Threading.Tasks;
 using Timetabler.Entitities;
 
 namespace Timetabler.WCF
@@ -13,6 +14,6 @@ namespace Timetabler.WCF
     public interface IEventsService
     {
         [OperationContract]
-        List<Event> GetEvents();
+        Task<List<Event>> GetEvents();
     }
 }
